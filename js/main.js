@@ -35,6 +35,7 @@ let a = ""
 function modal (obj) {
     
     list.addEventListener("click", (evt) => {
+        elModal.innerHTML = null
         obj.items.forEach(el => {
             if(evt.target.id == el.id){
 
@@ -87,7 +88,11 @@ function modal (obj) {
     })
 }
 
-
+elModal.addEventListener("click", (evt) => {
+    if(evt.target.className == "close"){
+        elModal.classList.add("close-modal")
+    }
+})
 
 
 
